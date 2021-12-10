@@ -24,7 +24,7 @@ public class EstadoService implements BaseService<Estado> {
 	@Override
 	public Optional<Estado> obtenerPorId(Long id) {
 		Optional<Estado> estado = estadoRepository.findById(id);
-		if(estado.isPresent()) {
+		if(estado.equals(null)) {
 			return estado.empty();
 		}else {
 			return estado;
